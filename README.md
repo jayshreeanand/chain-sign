@@ -1,14 +1,45 @@
-# Chain Sign -
+# Chainlink powered e-Document verification and signing using smart contracts, IPFS and chainlink APIs
 
-[![codecov](https://codecov.io/gh/hackbg/chainlink-fullstack/branch/main/graph/badge.svg?token=60ZDWLHB53)](https://codecov.io/gh/hackbg/chainlink-fullstack)
+[LIVE DEMO](https://chain-sign-demo.herokuapp.com)
 
-[LIVE DEMO](https://chainlink-demo.app)
+Built with:
 
+- [Next.js](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Hardhat](https://hardhat.org)
+- [TypeChain](https://github.com/dethcrypto/TypeChain)
+- [Ethers.js](https://docs.ethers.io/v5/)
+- [useDApp](https://usedapp.io)
+- [Chakra UI](https://chakra-ui.com)
+- [Moralis](https://moralis.io/)
+
+## Inspiration
+
+Chainsign adds signing and verifying e-contract and document function to the blockchain. This solves legal issues involved with documents through use of chainlink and smart contracts
+
+With blockchain, documents are embedded in digital code and stored in transparent, shared databases, where they’re protected from deletion, tampering and revision. Every agreement, every task, and every payment would have a digital record and signature that could be identified, validated, stored, and shared. Intermediaries like lawyers, brokers and institutions might no longer be necessary. Individuals and organizations would freely transact and interact with one another with little friction. This is the immense potential of blockchain.
+
+## What it does
+
+Document upload flow
+
+![Chainlink](https://user-images.githubusercontent.com/5363211/170849311-7afa8745-4c78-4c28-a234-b4301c0ea753.jpeg)
+
+Certificates are issued by an authority, such as an education institute, legal institution stored oncentralized document management server, or on a distributed file system like IPFS and signed with a cryptographic function. The content hash and certificate’s metadata hash are then stored on the blockchain digital ledger and attached to the user’s digital identity as a smart contract address that stores this information This represents a sort of unique authenticity token, which identifies the document in a non-questionable way.
+
+- Signer has to LogIn
+- After LogIn has been successful you can upload a document.
+- You can sign uploaded document.
+- DocumentHash / Meta data hash is generated. DocumentHash should be stored on Blockchain. Signed document is stored on IPFS.
+
+Document verification flow
+
+![Verification flow](https://user-images.githubusercontent.com/5363211/170849621-b2091dd8-5a4b-481e-a7c4-c488b463a8d3.jpeg)
+
+Users who need to verify their certificates with a third party do so by sharing the authenticity token (that is, the file contract address), which contains all the necessary information to verify that the document exists and is authentic and not counterfeited.
+
+The user retrieves the certificate to verify from its location and initiates a new transaction on the blockchain network, transferring the authenticity token to the verification authority. The authority obtains the signed content and metadata of the certificate being verified and then compares them with the equivalent hash values from the off-chain copy. If the values match, the document is verified
 End-to-end implementation of the following Chainlink features using Hardhat development environment and Next.js frontend framework:
-
-- [Request & Receive data](https://docs.chain.link/docs/request-and-receive-data/)
-- [Chainlink Price Feeds](https://docs.chain.link/docs/using-chainlink-reference-contracts/)
-- [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/)
 
 Built with:
 
@@ -21,6 +52,10 @@ Built with:
 - [Chakra UI](https://chakra-ui.com)
 - Linting with [ESLint](https://eslint.org)
 - Formatting with [Prettier](https://prettier.io)
+
+![Document upload and signing flow](https://user-images.githubusercontent.com/5363211/170849311-7afa8745-4c78-4c28-a234-b4301c0ea753.jpeg)
+
+![Verification flow](https://user-images.githubusercontent.com/5363211/170849621-b2091dd8-5a4b-481e-a7c4-c488b463a8d3.jpeg)
 
 ## Requirements
 
